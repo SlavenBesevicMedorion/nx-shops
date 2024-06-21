@@ -1,0 +1,37 @@
+{
+  "name": "shared-product-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/product/ui/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/product/ui/src/**/*.ts",
+          "libs/shared/product/ui/src/**/*.html"
+        ]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "libs/shared/product/ui/jest.config.ts"
+      },
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/product/ui"]
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/product/ui",
+        "main": "libs/shared/product/ui/src/index.ts",
+        "tsConfig": "libs/shared/product/ui/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  },
+  "tags": ["scope:shared", "type:ui"]
+}
