@@ -38,8 +38,3 @@ So it also illustrates the CI time savings we get from DTE.
 You can also use [the non-DTE CI config](.github/workflows/affected-ci.yml):
 - without NxCloud
 - with NxCloud
-
-and you should notice a difference of 8-9 minutes down to 1-2 minutes because of caching.
-So it can also be used to explain the caching benefits.
-
-
