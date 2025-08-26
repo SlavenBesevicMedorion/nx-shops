@@ -34,7 +34,3 @@ In the above yaml, if you remove the line that activate DTE:
 
 it will go from finishing in 3 minutes, to finishing in 9 minutes. That is because we can now parallelise the tasks across machines.
 So it also illustrates the CI time savings we get from DTE.
-
-You can also use [the non-DTE CI config](.github/workflows/affected-ci.yml):
-- without NxCloud
-- with NxCloud
